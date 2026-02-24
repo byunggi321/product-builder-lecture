@@ -1,7 +1,20 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate-btn');
+    const themeBtn = document.getElementById('theme-btn');
     const numberDisplay = document.querySelector('.number-display');
+
+    // Theme logic
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    themeBtn.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme');
+        let newTheme = theme === 'light' ? 'dark' : 'light';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
 
     const BALL_COLORS = [
         '#fbc400', // Yellow

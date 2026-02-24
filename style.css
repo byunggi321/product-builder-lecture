@@ -1,11 +1,25 @@
 
 :root {
     --background-color: #f0f2f5;
+    --container-bg: #ffffff;
+    --text-color: #333333;
     --main-accent-color: #4a90e2;
     --secondary-accent-color: #50e3c2;
-    --text-color: #333;
-    --white: #fff;
+    --white: #ffffff;
     --shadow-color: rgba(0, 0, 0, 0.1);
+    --machine-bg: linear-gradient(145deg, #e6e9ee, #ffffff);
+    --grid-color: #f9f9f9;
+}
+
+[data-theme='dark'] {
+    --background-color: #121212;
+    --container-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --main-accent-color: #64b5f6;
+    --secondary-accent-color: #81c784;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --machine-bg: linear-gradient(145deg, #252525, #333333);
+    --grid-color: #1a1a1a;
 }
 
 body {
@@ -16,22 +30,52 @@ body {
     place-items: center;
     min-height: 100vh;
     margin: 0;
-    background-image: linear-gradient(45deg, #f9f9f9 25%, transparent 25%),
-                      linear-gradient(-45deg, #f9f9f9 25%, transparent 25%),
-                      linear-gradient(45deg, transparent 75%, #f9f9f9 75%),
-                      linear-gradient(-45deg, transparent 75%, #f9f9f9 75%);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-image: linear-gradient(45deg, var(--grid-color) 25%, transparent 25%),
+                      linear-gradient(-45deg, var(--grid-color) 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, var(--grid-color) 75%),
+                      linear-gradient(-45deg, transparent 75%, var(--grid-color) 75%);
     background-size: 20px 20px;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
 }
 
 .container {
+    position: relative;
     text-align: center;
     padding: 2rem;
-    background: var(--white);
+    background: var(--container-bg);
     border-radius: 15px;
     box-shadow: 0 10px 30px var(--shadow-color);
     max-width: 90%;
     width: 500px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#theme-btn {
+    background: none;
+    border: 2px solid var(--main-accent-color);
+    color: var(--main-accent-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#theme-btn:hover {
+    background: var(--main-accent-color);
+    color: var(--white);
 }
 
 h1 {
@@ -42,11 +86,12 @@ h1 {
 }
 
 .lotto-machine {
-    background: linear-gradient(145deg, #e6e9ee, #ffffff);
+    background: var(--machine-bg);
     border-radius: 10px;
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: inset 0 2px 10px var(--shadow-color);
+    transition: background 0.3s ease;
 }
 
 .number-display {
