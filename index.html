@@ -1,63 +1,122 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Lotto Expert - AI 기반 로또 번호 생성기 및 당첨 전략</title>
+    <meta name="description" content="과학적인 난수 생성 알고리즘을 사용한 로또 번호 생성 도구입니다. 로또 당첨 확률과 통계 정보를 제공하여 고품질의 사용자 경험을 선사합니다.">
+    <meta name="keywords" content="로또번호생성기, 로또당첨번호, 로또통계, 로또전략, 무료로또번호">
+    
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3666824699323157"
      crossorigin="anonymous"></script>
+     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="theme-toggle">
-            <button id="theme-btn" aria-label="Toggle theme">🌓</button>
-        </div>
-        <h1>Lotto Number Generator</h1>
-        <div class="lotto-machine">
-            <div class="number-display"></div>
-        </div>
-        <button id="generate-btn">Generate Numbers</button>
-        
-        <div class="contact-section">
-            <hr>
-            <h2>Partnership Inquiry</h2>
-            <form action="https://formspree.io/f/mwvnakqa" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">Lotto Expert</div>
+            <ul class="nav-links">
+                <li><a href="#generator">생성기</a></li>
+                <li><a href="#about">사이트 소개</a></li>
+                <li><a href="#tips">당첨 팁</a></li>
+                <li><a href="#contact">문의하기</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <button id="theme-btn" aria-label="Toggle theme">🌓</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <!-- Generator Section -->
+        <section id="generator" class="container">
+            <h1>로또 번호 생성기</h1>
+            <p class="subtitle">엄격한 난수 생성 알고리즘으로 추출된 행운의 번호입니다.</p>
+            <div class="lotto-machine">
+                <div class="number-display"></div>
+            </div>
+            <button id="generate-btn">오늘의 번호 받기</button>
+        </section>
+
+        <!-- Information Section (AdSense Approval Optimization) -->
+        <section id="about" class="info-section">
+            <div class="container-inner">
+                <h2>Lotto Expert 서비스 소개</h2>
+                <p>본 사이트는 사용자에게 신뢰할 수 있는 무작위 번호 추출 기능을 제공하기 위해 개발되었습니다. JavaScript의 <code>Math.random()</code> 함수와 <code>Set</code> 객체를 결합하여 중복 없는 6개의 번호를 과학적으로 추출합니다.</p>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>완벽한 무작위성</h3>
+                        <p>특정 패턴에 치우치지 않는 순수 난수 생성 알고리즘을 사용합니다.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>사용자 편의성</h3>
+                        <p>다크 모드 지원 및 직관적인 UI로 언제 어디서나 편리하게 이용 가능합니다.</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
-                </div>
-                <button type="submit" id="submit-btn">Send Message</button>
-            </form>
+            </div>
+        </section>
+
+        <section id="tips" class="info-section bg-alt">
+            <div class="container-inner">
+                <h2>로또 당첨 확률과 통계 정보</h2>
+                <p>대한민국 로또 6/45의 1등 당첨 확률은 1/8,145,060입니다. 매주 수많은 조합이 발생하지만, 각 번호가 나올 확률은 이론적으로 동일합니다. 본 생성기는 여러분의 선택에 재미와 편의를 더해드립니다.</p>
+                <ul class="tip-list">
+                    <li><strong>균형 있는 조합:</strong> 홀수와 짝수의 비율을 적절히 섞는 것이 시각적으로 안정적입니다.</li>
+                    <li><strong>연속 번호:</strong> 3개 이상의 연속된 번호는 확률상 드물게 나타납니다.</li>
+                    <li><strong>소신 있는 선택:</strong> 자동 생성된 번호 중 마음에 드는 숫자를 골라보세요.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container">
+            <div class="contact-section">
+                <h2>제휴 및 서비스 문의</h2>
+                <p class="contact-desc">사이트 이용 중 불편한 점이나 제휴 제안이 있으시면 아래 양식을 통해 보내주세요.</p>
+                <form action="https://formspree.io/f/mwvnakqa" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="email">이메일 주소</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">문의 내용</label>
+                        <textarea id="message" name="message" placeholder="문의하실 내용을 상세히 적어주세요." required></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn">문의 보내기</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Comments Section -->
+        <section id="comments" class="container">
+            <div class="comments-section">
+                <h2>사용자 커뮤니티</h2>
+                <div id="disqus_thread"></div>
+                <script>
+                    (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://product-builder-lecture-5.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container-inner">
+            <p>&copy; 2026 Lotto Expert. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#contact">고객센터</a>
+            </div>
         </div>
-        <div class="comments-section">
-            <hr>
-            <div id="disqus_thread"></div>
-            <script>
-                /**
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                /*
-                var disqus_config = function () {
-                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                */
-                (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://product-builder-lecture-5.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-    </div>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
