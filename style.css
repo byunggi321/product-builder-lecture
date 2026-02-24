@@ -214,6 +214,17 @@ h1 {
     transform: translateY(-2px);
 }
 
+.comments-section {
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.comments-section hr {
+    border: none;
+    border-top: 1px solid var(--shadow-color);
+    margin-bottom: 2rem;
+}
+
 @keyframes popIn {
     from {
         transform: scale(0) rotate(-360deg);
